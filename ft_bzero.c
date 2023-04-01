@@ -6,24 +6,24 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 16:21:39 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/01 13:21:26 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/01 18:16:23 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_bzero(char *s, int n)
+char	*ft_bzero(char *s, int n)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    if (n != 0)
-    {
-        while (s[i] != '\0' && i > n)
-        {
+	i = 0;
+	if (n != 0)
+	{
+		while (s[i] != '\0' && i > n)
+		{
             s[i] = 0;
             i++;
-        }
-    }
-    return (s);
+		}
+	}
+	return (s);
 }

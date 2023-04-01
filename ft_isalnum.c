@@ -6,7 +6,7 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 13:42:21 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/01 13:23:28 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/01 18:18:52 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@ int	ft_isalnum(int c)
 	int	i;
 
 	i = 0;
-    if (str[0] == '\0')
-        return (1);
-    while (str[i] != '\0')
-    {
-        if ((str[i] >= 'a' && str[i] <= 'z')
-            || (str[i] >= 'A' && str[i] <= 'Z')
-            || (str[i] >= '0' && str[i] <= '9'))
-            i++;
-        else
-            return (0);
-    }
-    return (1);
+	if (str[0] == '\0')
+	    return (1);
+	while (str[i] != '\0')
+	{
+		if ((str[i] >= 'a' && str[i] <= 'z')
+		|| (str[i] >= 'A' && str[i] <= 'Z')
+		|| (str[i] >= '0' && str[i] <= '9'))
+			i++;
+	    else
+	        return (0);
+	}
+	return (1);
 }
