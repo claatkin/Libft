@@ -6,12 +6,11 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 16:50:16 by claatkin          #+#    #+#             */
-/*   Updated: 2023/03/17 16:50:34 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/01 13:08:46 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 int ft_strlen(char *str)
 {
@@ -23,10 +22,3 @@ int ft_strlen(char *str)
     }
     return (i);
 }
-
-/*int main(void)
-{
-    int result;
-    result = ft_strlen("Holahola");
-    printf("%d", result);
-}*/

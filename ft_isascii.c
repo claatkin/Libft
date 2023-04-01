@@ -6,11 +6,11 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 14:49:06 by claatkin          #+#    #+#             */
-/*   Updated: 2023/03/20 14:49:14 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/01 13:09:17 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int ft_isascii(char *str)
 {
@@ -28,19 +28,4 @@ int ft_isascii(char *str)
             return (0);
     }
     return (1);
-}
-
-int   main()
-{
-    int result;
-    result= ft_isalpha("");
-    printf("%d\n", result);
-    result= ft_isalpha("hola");
-    printf("%d\n", result);
-    result= ft_isalpha("hola123hola");
-    printf("%d\n", result);
-    result= ft_isalpha("123");
-    printf("%d\n", result);
-    result= ft_isalpha("123h");
-    printf("%d\n", result);
 }

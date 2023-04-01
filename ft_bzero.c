@@ -6,11 +6,11 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 16:21:39 by claatkin          #+#    #+#             */
-/*   Updated: 2023/03/20 16:21:44 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/01 13:21:26 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char    *ft_bzero(char *s, int n)
 {
@@ -26,21 +26,4 @@ char    *ft_bzero(char *s, int n)
         }
     }
     return (s);
-}
-
-// This is clearly wrong, think about this one more
-
-int main(void)
-{
-    int result;
-    result = *ft_bzero("holi", 0);
-    printf("%d\n", result);
-    result = *ft_bzero("hola", 2);
-    printf("%d\n", result);
-    result = *ft_bzero("hola123hola", 8);
-    printf("%d\n", result);
-    result = *ft_bzero("123", 2);
-    printf("%d\n", result);
-    result = *ft_bzero("123h", 3);
-    printf("%d\n", result);
 }

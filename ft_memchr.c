@@ -5,16 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/21 13:30:11 by claatkin          #+#    #+#             */
-/*   Updated: 2023/03/21 13:30:42 by claatkin         ###   ########.fr       */
+/*   Created: 2023/04/01 13:05:13 by claatkin          #+#    #+#             */
+/*   Updated: 2023/04/01 13:06:40 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// The memchrt() function returns a pointer to the byte located, or NULL if no
-// such byte exists within n bytes.
-
-// the memchr() function return a pointer to the byte located, or NULL if no such
-// byte exists within n bytes
+#include "libft.h"
 
 int *ft_memchr(const void *str, char c, int n)
 {
@@ -25,7 +21,7 @@ int *ft_memchr(const void *str, char c, int n)
     {
         if (str[i] == c)
         {
-            return (str[i]);
+            return (str[i]); 
         }
         else
         {
@@ -34,20 +30,4 @@ int *ft_memchr(const void *str, char c, int n)
         }
     }
     return (0);
-}
-
-// PREGUNTAR COSITAS AQUI
-
-int main(void)
-{
-    int result;
-    printf("%d\n", result);
-    result = *ft_memchr("Claro", "a", 2);
-    printf("%d\n", result);
-    result = *ft_memchr("Claro", "a", 5);
-    printf("%d\n", result);
-    result = *ft_memchr("Claro", "a", 3);
-    printf("%d\n", result);
-    result = *ft_memchr("Claro", "A", 5);
-    printf("%d\n", result);
 }

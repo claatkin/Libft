@@ -6,12 +6,11 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 18:04:49 by claatkin          #+#    #+#             */
-/*   Updated: 2023/03/17 18:04:57 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/01 13:08:34 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 char    *ft_tolower(char *str)
 {
@@ -26,10 +25,3 @@ char    *ft_tolower(char *str)
     }
     return (str);
 }
-
-/*int main(void)
-{
-    char a[] = "HOLA";
-    ft_tolower(a);
-    printf("%s", a);
-}*/

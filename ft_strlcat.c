@@ -6,11 +6,11 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 17:15:14 by claatkin          #+#    #+#             */
-/*   Updated: 2023/03/20 17:15:16 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/01 13:08:52 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 char *ft_strlcat(char *dest, char *src, int destsize)
 {
@@ -30,13 +30,4 @@ char *ft_strlcat(char *dest, char *src, int destsize)
         }
         dest[i] = '\0';
         return (dest);
-}
-
-//PENSAR ESTE UN POCO MÁS
-
-int main()
-{
-        char src[] = "mundo";
-        char dest[] = "Hola ";
-        printf("%s", ft_strlcat(dest, src, 3));
 }

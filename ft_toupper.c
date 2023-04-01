@@ -6,12 +6,11 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 17:43:56 by claatkin          #+#    #+#             */
-/*   Updated: 2023/03/17 17:43:59 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/01 13:08:31 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 char    *ft_toupper(char *str)
 {
@@ -25,11 +24,4 @@ char    *ft_toupper(char *str)
         i++;
     }
     return (str);
-}
-
-int main(void)
-{
-    char a[] = "hola";
-    ft_toupper(a);
-    printf("%s", a);
 }

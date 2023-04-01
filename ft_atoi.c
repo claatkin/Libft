@@ -6,13 +6,13 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 18:33:27 by claatkin          #+#    #+#             */
-/*   Updated: 2023/03/17 18:33:31 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/01 13:25:56 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
     int i;
     int s;
@@ -36,10 +36,3 @@ int ft_atoi(char *str)
     }
     return (s * n);
 }
-
-// Check if this is correct
-/*int main(void)
-{
-    printf("%i\n", ft_atoi("        ---+--+1234ab567"));
-    return 0;
-}*/

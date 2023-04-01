@@ -6,11 +6,11 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 18:14:05 by claatkin          #+#    #+#             */
-/*   Updated: 2023/03/17 18:14:32 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/01 13:08:43 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 int     ft_strncmp(char *s1, char *s2, unsigned int n)
 {
@@ -28,20 +28,3 @@ int     ft_strncmp(char *s1, char *s2, unsigned int n)
         }
         return (0);
 }
-
-//MIRAD y ver qué deberia dar cada cosa
-
-/*int main (void)
-{
-        int result;
-        result = ft_strncmp("abc", "abc", 2);
-        printf("%d\n", result);
-        result = ft_strncmp("abC", "abc", 2);
-        printf("%d\n", result);
-        result = ft_strncmp("aBc", "abc", 2);
-        printf("%d\n", result);
-        result = ft_strncmp("abc", "abC", 2);
-        printf("%d\n", result);
-        result = ft_strncmp("abc", "aBc", 2);
-        printf("%d\n", result);
-}*/

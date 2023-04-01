@@ -6,17 +6,11 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 12:46:59 by claatkin          #+#    #+#             */
-/*   Updated: 2023/03/25 12:47:03 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/01 13:08:56 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-/*The strchr() function locates the first occurrence of c (converted to a
-     char) in the string pointed to by s.  The terminating null character is
-     considered to be part of the string; therefore if c is `\0', the func-
-     tions locate the terminating `\0'. The function strchr() returns a pointer 
-     to the located character, or NULL if the character does not appear in the string.*/
+#include "libft.h"
 
 char ft_strchr(const char *str, char c)
 {
@@ -31,13 +25,4 @@ char ft_strchr(const char *str, char c)
           i++;
     }
     return (0);
-}
-
-// Preguntar
-
-int  main(void)
-{
-     int result;
-     result = ft_strchr("abc", "a");
-     printf("%d\n", result);
 }
