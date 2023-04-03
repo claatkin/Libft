@@ -6,23 +6,23 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 16:21:39 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/01 18:16:23 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/03 16:45:25 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_bzero(char *s, int n)
+void	*ft_bzero(void *s, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (n != 0)
 	{
 		while (s[i] != '\0' && i > n)
 		{
-            s[i] = 0;
-            i++;
+			s[i] = 0;
+			i++;
 		}
 	}
 	return (s);

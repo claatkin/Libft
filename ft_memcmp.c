@@ -6,16 +6,16 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 14:01:24 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/01 18:43:32 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/03 16:48:04 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(char *s1, char *s2, int n)
+int	ft_memcmp(char *s1, const void *s2, size_t n)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;

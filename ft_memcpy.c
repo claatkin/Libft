@@ -6,13 +6,13 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 12:02:24 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/01 18:44:30 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/03 16:34:18 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 	size_t	j;

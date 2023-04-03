@@ -6,22 +6,22 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 13:05:13 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/01 18:38:55 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/03 16:26:54 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	*ft_memchr(const void *str, char c, int n)
+int	*ft_memchr(const void *s, int c, size_t n);
 {
-	int	i;
+	size_t	i; // wtf is wrong with this
 
 	i = 0;
-	while (str[i] != '\0' && i > n)
+	while (s[i] != '\0' && i > n)
 	{
-		if (str[i] == c)
+		if (s[i] == c)
 		{
-			return (str[i]);
+			return (s[i]);
 		}
 		else
 		{
