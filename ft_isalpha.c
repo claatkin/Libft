@@ -6,39 +6,34 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 17:53:33 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/03 15:46:09 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/04 17:36:32 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
 int	ft_isalpha(int c)
 {
-	int	i;
-
-	i = 0;
-	while (i != '\0')
-	{
-		if ((c >= 'a' && c <= 'z')
-			|| (c >= 'A' && c <= 'Z'))
-			i++;
-		else
-			return (0);
-	}
-	return (1);
+	if ((c >= 'a' && c <= 'z')
+		|| (c >= 'A' && c <= 'Z'))
+		return (1);
+	else
+		return (0);
 }
 
+/* YA SE VERÁ CÓMO HACER EL MAIN
 int	main(void)
 {
     int result;
     result= ft_isprint("");
     printf("%d\n", result);
-    result= ft_isprint("hola");
+    result= ft_isprint("h");
     printf("%d\n", result);
-    result= ft_isprint("hola123hola");
+    result= ft_isprint("5");
     printf("%d\n", result);
-    result= ft_isprint("ú");
+    result= ft_isprint("u");
     printf("%d\n", result);
-    result= ft_isprint("1óh");
+    result= ft_isprint("8");
     printf("%d\n", result);
-}
+}*/

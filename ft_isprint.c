@@ -6,7 +6,7 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 17:32:02 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/03 16:13:13 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/04 17:41:04 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,8 @@
 
 int	ft_isprint(int c)
 {
-	int	i;
-
-	i = 0;
-	while (i != '\0')
-	{
-		if ((c >= 32 && c < 127))
-			i++;
-		else
-			return (0);
-	}
-	return (1);
+	if ((c >= 32 && c < 127))
+		return (1);
+	else
+		return (0);
 }
