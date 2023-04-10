@@ -6,7 +6,7 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 15:33:18 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/03 16:18:01 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/10 15:35:18 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_memset(void *b, int c, size_t len)
 	{
 		str[i] = c;
 		i++;
-		len--:
+		len--;
 	}
 	return (*str);
 }

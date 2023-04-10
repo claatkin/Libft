@@ -6,7 +6,7 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 17:53:33 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/04 17:36:32 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/10 16:40:33 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,13 @@ int	ft_isalpha(int c)
 		return (0);
 }
 
-/* YA SE VERÁ CÓMO HACER EL MAIN
-int	main(void)
+/*int	main(void)
 {
     int result;
-    result= ft_isprint("");
+    result= ft_isalpha('h');
     printf("%d\n", result);
-    result= ft_isprint("h");
+    result= ft_isalpha('9');
     printf("%d\n", result);
-    result= ft_isprint("5");
-    printf("%d\n", result);
-    result= ft_isprint("u");
-    printf("%d\n", result);
-    result= ft_isprint("8");
+    result= ft_isalpha('7');
     printf("%d\n", result);
 }*/
