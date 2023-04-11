@@ -6,7 +6,7 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 19:10:23 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/10 11:46:34 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/11 15:28:27 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ int		ft_isprint(int c);
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t len);
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src,
+size_t	ft_strlcpy(char *dst, const char *src,
 			size_t dstsize);
-size_t	ft_strlcat(char *restrict dst, const char *restrict src,
+size_t	ft_strlcat(char *dst, const char *src,
 			size_t dstsize);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
