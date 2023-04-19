@@ -6,7 +6,7 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 18:09:04 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/13 12:32:19 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/19 16:03:06 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,27 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	i = 0;
-	while ((dstsize > 0) && (i <= dstsize - 1))
+	if (dstsize <= 0)
+		return (ft_strlen(src));
+	while ((i < (dstsize - 1)) && (src[i] != '\0'))
 	{
 		dst[i] = src[i];
 		i++;
 	}
+	if (dstsize != 0)
+		dst[i] = '\0';
+	while (src[i] != '\0')
+		i++;
 	return (i);
 }
 
-/*int	main(void)
+/*#include <string.h>
+int	main(void)
 {
-	char dst [] = "";
-	char src [] = "hola";
+	char dst [5] = "";
+	char src [5] = "hola";
 	size_t len = 2;
-	
-    printf("%zu\n", ft_strlcpy(dst, src, len));
+	printf("%s %zu\n", dst, strlcpy(dst, src, len));
+	*dst = 0;
+    printf("%s %zu\n", dst, ft_strlcpy(dst, src, len));
 }*/

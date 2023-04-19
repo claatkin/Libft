@@ -6,7 +6,7 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 18:33:27 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/13 13:00:31 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/19 15:14:17 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ int	ft_atoi(const char *str)
 
 	i = 0;
 	s = 1;
-	while (str[i] == ' ' || (str[i] == '\t') || (str[i] == '\n')
-		|| (str[i] == '\v') || (str[i] == '\f') || (str[i] == '\r'))
+	while (str[i] == ' ' || ((str[i] >= 9) && (str[i] <= 13)))
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{

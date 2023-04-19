@@ -6,24 +6,38 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 16:21:39 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/03 16:45:25 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/19 18:52:13 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
-void	*ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	size_t	i;
 
 	i = 0;
-	if (n != 0)
+	if (n == 0)
+		return ;
+	while (((char *)s)[i] != '\0' && i < n)
 	{
-		while (s[i] != '\0' && i > n)
-		{
-			s[i] = 0;
-			i++;
-		}
+		((char *)s)[i] = '\0';
+		i++;
 	}
-	return (s);
 }
+
+/*#include <strings.h>
+#include <stdio.h>
+
+int	main(void)
+{
+	char s[10] = "hola";
+	size_t n = 8;
+	//printf("%zu\n", bzero(s, n));
+    //printf("%zu\n", ft_bzero(s, n));
+	printf("Before: %s", s);
+	ft_bzero(s, n);
+	printf("\nAfter: %s", s);
+	return (0);
+}*/
