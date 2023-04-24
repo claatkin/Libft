@@ -6,7 +6,7 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 16:21:39 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/19 18:52:13 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/04/24 15:35:58 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_bzero(void *s, size_t n)
 	i = 0;
 	if (n == 0)
 		return ;
-	while (((char *)s)[i] != '\0' && i < n)
+	while (i < n)
 	{
 		((char *)s)[i] = '\0';
 		i++;
