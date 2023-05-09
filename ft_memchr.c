@@ -6,7 +6,7 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 13:05:13 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/24 19:01:39 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/05/09 17:08:20 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (((unsigned char *)s)[i] == (unsigned char)c)
 		{
-			return (((unsigned char *)s));
+			return (i);
 		}
 		else
 			i++;
@@ -29,14 +29,13 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (0);
 }
 
-/*#include <string.h>
+#include <string.h>
 #include <stdio.h>
 
 int	main(void)
 {
-	char s[10] = "hola";
 	size_t n = 8;
-	printf("%zu\n", memchar("hola", "a", 8));
-    printf("%zu\n", ft_memchar("hola", "a", 8));
+	printf("%s\n", memchr("hola", 'a', n));
+    printf("%s\n", ft_memchr("hola", 'a', n));
 	return (0);
-}*/
+}
