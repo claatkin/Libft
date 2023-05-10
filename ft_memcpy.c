@@ -6,7 +6,7 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/24 12:02:24 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/24 19:15:00 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/05/10 15:54:13 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,14 @@
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
-	size_t	j;
 
 	i = 0;
-	j = 0;
-	while (((unsigned char *)dst)[i] != '\0')
+	if (dst == 0 && src == 0)
+		return (0);
+	while (i < n)
 	{
-		while ((((unsigned char *)dst)[i] != '\0') && (j < n))
-		{
-			((unsigned char *)dst)[i] = ((unsigned char *)src)[j];
-			j++;
-		}
+		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
 		i++;
 	}
-	((unsigned char *)dst)[i] = '\0';
 	return (((unsigned char *)dst));
 }

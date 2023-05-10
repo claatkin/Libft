@@ -6,7 +6,7 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 12:26:34 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/24 19:20:55 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/05/10 16:10:30 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,27 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
 
-	i = 0;
-	j = 0;
-	while (((unsigned char *)dst)[i] != '\0')
-		i++;
+	if (dst == 0 && src == 0)
+		return (0);
+	if (dst > src)
 	{
-		while (((unsigned char *)dst)[i] != '\0' && j < len)
+		i = (int)len - 1;
+		while (i >= 0)
 		{
-			((unsigned char *)dst)[i] = ((unsigned char *)src)[j];
-			j++;
+			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+			i--;
 		}
-		i++;
 	}
-	((unsigned char *)dst)[i] = '\0';
+	else
+	{
+		i = 0;
+		while (i < (int)len)
+		{
+			((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+			i++;
+		}
+	}
 	return (((unsigned char *)dst));
 }
