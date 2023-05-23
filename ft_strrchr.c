@@ -6,23 +6,31 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 15:06:16 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/04 17:13:59 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/05/22 12:59:40 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
-	i = ???; // Think how do I get this info
-	while (s[i] != '\0')
+	i = ft_strlen(s);
+	while (s[i] != (char)c)
 	{
-		if (s[i] == c)
-			return (i);
-	}
-	else
+		if (i == 0)
+			return (0);
 		i--;
-	return (0);
+	}
+	return (&((char *)s)[i]);
 }
+
+/*#include <string.h>
+#include <stdio.h>
+int	main(void)
+{
+	char *src = "the cake is a lie !\0I'm hidden lol\r\n";
+	printf("%s\n", strrchr(src, ' '));
+    printf("%s\n", ft_strrchr(src, ' '));
+}*/
