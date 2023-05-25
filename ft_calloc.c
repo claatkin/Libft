@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 18:14:05 by claatkin          #+#    #+#             */
-/*   Updated: 2023/05/25 11:59:53 by claatkin         ###   ########.fr       */
+/*   Created: 2023/05/25 15:02:53 by claatkin          #+#    #+#             */
+/*   Updated: 2023/05/25 15:18:53 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char	*c1;
-	unsigned char	*c2;
-	size_t			i;
+	char			*pointer;
+	unsigned int	i;
 
 	i = 0;
-	c1 = (unsigned char *) s1;
-	c2 = (unsigned char *) s2;
-	while ((c1[i] != '\0' || c2[i] != '\0') && i < n)
+	pointer = malloc(count * size);
+	if (pointer == NULL)
+		return (NULL);
+	while (i < (count * size))
 	{
-		if (c1[i] == c2[i])
-			i++;
-		else if (c1[i] < c2[i])
-			return (-1);
-		else
-			return (1);
+		pointer[i] = 0;
+		i++;
 	}
-	return (0);
+	return ((void *)pointer);
 }

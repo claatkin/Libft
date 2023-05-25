@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/17 18:14:05 by claatkin          #+#    #+#             */
-/*   Updated: 2023/05/25 11:59:53 by claatkin         ###   ########.fr       */
+/*   Created: 2023/05/25 15:21:41 by claatkin          #+#    #+#             */
+/*   Updated: 2023/05/25 15:30:51 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strdup(const char *s1)
 {
-	unsigned char	*c1;
-	unsigned char	*c2;
-	size_t			i;
+	char			*s2;
+	unsigned int	i;
+	unsigned int	len;
 
 	i = 0;
-	c1 = (unsigned char *) s1;
-	c2 = (unsigned char *) s2;
-	while ((c1[i] != '\0' || c2[i] != '\0') && i < n)
+	len = ft_strlen(s1);
+	s2 = malloc((len + 1) * sizeof(char));
+	if (s2 == NULL)
+		return (NULL);
+	while (i <= len)
 	{
-		if (c1[i] == c2[i])
-			i++;
-		else if (c1[i] < c2[i])
-			return (-1);
-		else
-			return (1);
+		s2[i] = s1[i];
+		i++;
 	}
-	return (0);
+	return (s2);
 }

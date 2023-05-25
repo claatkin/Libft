@@ -6,7 +6,7 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 19:10:23 by claatkin          #+#    #+#             */
-/*   Updated: 2023/05/23 16:17:17 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/05/25 15:33:03 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,8 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str);
+void	*ft_calloc(size_t count, size_t size);
+char	*ft_strdup(const char *s1);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
