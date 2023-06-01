@@ -6,12 +6,11 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 12:13:38 by claatkin          #+#    #+#             */
-/*   Updated: 2023/05/31 16:28:34 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/06/01 13:19:52 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	countingwords(char const *s, char c)
 {	
@@ -51,9 +50,22 @@ char	*addingwords(char const *s, char c, int *i)
 	word = malloc((length + 1) * sizeof(char));
 	if (word == NULL)
 		return (NULL);
-	ft_strlcpy(word, (char *)s + (*i - length), length + 1);
+	ft_strlcpy(word, (char *)s + *i, length + 1);
 	*i += length;
 	return (word);
+}
+
+void	cleaningtable(char **table)
+{
+	int	i;
+
+	i = 0;
+	while (table[i])
+	{
+		free(table[i]);
+		i++;
+	}
+	free (table);
 }
 
 char	**ft_split(char const *s, char c)
@@ -74,13 +86,7 @@ char	**ft_split(char const *s, char c)
 		table[j] = addingwords(s, c, &i);
 		if (table[j] == NULL && s[i] != '\0')
 		{
-			i = 0;
-			while (table[i])
-			{
-				free(table[i]);
-				i++;
-			}
-			free (table);
+			cleaningtable(table);
 			return (NULL);
 		}
 		j++;
@@ -88,3 +94,16 @@ char	**ft_split(char const *s, char c)
 	return (table);
 }
 
+/*#include <stdio.h>
+
+int main(void)
+{
+	char **table = ft_split("Holi caracoli", ' ');
+	int i = 0;
+	while (table[i] != NULL)
+	{
+		printf("%s", table[i]);
+		i++;
+	}
+	return (0);
+}*/
