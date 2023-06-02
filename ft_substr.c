@@ -6,12 +6,11 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 15:31:53 by claatkin          #+#    #+#             */
-/*   Updated: 2023/05/25 16:21:58 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/06/02 15:15:25 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*newfunction(void)
 {

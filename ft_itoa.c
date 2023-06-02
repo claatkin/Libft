@@ -6,12 +6,11 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 11:23:57 by claatkin          #+#    #+#             */
-/*   Updated: 2023/06/02 12:44:30 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/06/02 15:14:16 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_countdigits(int n)
 {

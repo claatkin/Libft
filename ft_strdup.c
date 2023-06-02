@@ -6,12 +6,11 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/25 15:21:41 by claatkin          #+#    #+#             */
-/*   Updated: 2023/05/25 15:30:51 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/06/02 15:14:57 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strdup(const char *s1)
 {

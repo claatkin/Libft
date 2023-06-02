@@ -6,7 +6,7 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 12:13:38 by claatkin          #+#    #+#             */
-/*   Updated: 2023/06/01 13:19:52 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/06/02 15:06:12 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*addingwords(char const *s, char c, int *i)
 
 	length = 0;
 	while (s[*i] == c)
-		i++;
+		(*i)++;
 	while (s[length + *i] != '\0' && s[length + *i] != c)
 		length++;
 	if (length == 0)
@@ -102,7 +102,7 @@ int main(void)
 	int i = 0;
 	while (table[i] != NULL)
 	{
-		printf("%s", table[i]);
+		printf("%s\n", table[i]);
 		i++;
 	}
 	return (0);

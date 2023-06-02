@@ -6,12 +6,11 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/20 16:21:39 by claatkin          #+#    #+#             */
-/*   Updated: 2023/04/24 15:35:58 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/06/02 15:10:33 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_bzero(void *s, size_t n)
 {
