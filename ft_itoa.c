@@ -6,7 +6,7 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 11:23:57 by claatkin          #+#    #+#             */
-/*   Updated: 2023/06/01 17:20:22 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/06/02 12:24:02 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int	ft_countdigits(int n)
 	int	i;
 
 	i = 0;
+	if (n < 0)
+		i++;
 	while (n >= 10)
 	{
 		n = n / 10;
@@ -35,21 +37,20 @@ char	*ft_limit(char *newstring)
 	return (newstring);
 }
 
-void	ft_recursive(int n, char *newstring, int i)
+void	ft_recursive(int n, char *newstring, int i, long num)
 {
-	printf("%d PATO\n", n);
 	if (n >= 10)
-	{
-	printf("%d REC\n", n);
-		ft_recursive(n / 10, newstring, i - 1);}
+		ft_recursive(n / 10, newstring, i - 1, num);
 	newstring[i] = (n % 10) + '0';
 }
 
 char	*ft_itoa(int n)
 {
 	int		counteddigits;
+	long	num;
 	char	*newstring;
 
+	num = n;
 	newstring = NULL;
 	if (n == -2147483648)
 	{
@@ -58,29 +59,19 @@ char	*ft_itoa(int n)
 	}
 	counteddigits = ft_countdigits(n);
 	if (n < 0)
-		counteddigits++;
-	newstring = malloc(counteddigits * (sizeof(char)));
+		n = n * -1;
+	newstring = malloc((counteddigits + 2) * (sizeof(char)));
 	if (newstring == NULL)
 		return (NULL);
-	if (n < 0)
-	{
-		//ft_putchar_fd('-', 1);
-		n = n * -1;
-		printf("%d AQUI\n", n);
-	}
-	if (n >= 0)
-	{
-		printf("%d N dentro rec\n", n);
-		ft_recursive(n, newstring, counteddigits);
-	}
+	ft_recursive(n, newstring, counteddigits, num);
+	if (num < 0)
+		newstring[0] = '-';
 	newstring[counteddigits + 1] = '\0';
 	return (newstring);
 }
 
-
-
 int	main(void)
 {
-	printf("%s ITOA", ft_itoa(-2147483647));
+	printf("%s ITOA", ft_itoa(-21545454));
 	return (0);
 }
