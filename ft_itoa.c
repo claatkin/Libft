@@ -6,7 +6,7 @@
 /*   By: claatkin <claatkin@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 11:23:57 by claatkin          #+#    #+#             */
-/*   Updated: 2023/06/02 12:24:02 by claatkin         ###   ########.fr       */
+/*   Updated: 2023/06/02 12:44:30 by claatkin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ int	ft_countdigits(int n)
 
 	i = 0;
 	if (n < 0)
+	{
+		n = n * -1;
 		i++;
+	}
 	while (n >= 10)
 	{
 		n = n / 10;
@@ -70,8 +73,8 @@ char	*ft_itoa(int n)
 	return (newstring);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	printf("%s ITOA", ft_itoa(-21545454));
 	return (0);
-}
+}*/

@@ -1,0 +1,6 @@
+/.vscode
+libft.h.gch
+*.o
+*.out
+/a.out.dSYM
+libft.a
